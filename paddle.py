@@ -12,9 +12,6 @@ class Paddle(Turtle):
         self.up()
         self.down()
 
-    def set_coords(self):
-        pass
-
     def up(self):
         new_y_pos = self.ycor() + 20
         self.goto(self.xcor(), new_y_pos)
