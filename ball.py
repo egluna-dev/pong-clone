@@ -24,9 +24,9 @@ class Ball(Turtle):
 
     def bounce_paddle(self):
         self.move_x *= -1
-        self.sleep_time *= 0.9
+        self.sleep_time *= 0.95
 
     def reset_ball(self):
         self.setposition(0, 0)
-        self.sleep_time(0.1)
+        self.sleep_time = 0.1
         self.move_x *= -1

@@ -26,7 +26,11 @@ program_on = True
 while program_on:
     screen.update()
     time.sleep(ball.sleep_time)
+    print(ball.sleep_time)
     ball.move_ball()
+    if scoreboard.left_score == 10 or scoreboard.right_score == 10:
+        program_on = False
+        scoreboard
     # Detect collision with upper and lower boundaries
     if ball.ycor() > 290 or ball.ycor() < -290:
         ball.bounce_wall()
@@ -34,7 +38,6 @@ while program_on:
     # Detect collision with paddles
     if (ball.distance(right_paddle) < 40 or ball.distance(left_paddle) < 40) and (ball.xcor() > 330 or ball.xcor() < -330):
         ball.bounce_paddle()
-        ball.sleep_time -= 0.01
 
     # Detect paddle collision with upper and lower boundaries
     # if left_paddle.ycor() > 290 and left_paddle.ycor() < -290 and right_paddle.ycor() > 290 and right_paddle.ycor() < -290:

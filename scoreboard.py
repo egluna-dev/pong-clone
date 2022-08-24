@@ -28,3 +28,11 @@ class Scoreboard(Turtle):
         self.right_score += 1
         self.clear()
         self.update_scoreboard()
+
+    def game_over(self):
+        if self.left_score == 10:
+            self.write(f"Game Over! Left player has won!",
+                       align="center", font=FONT)
+        elif self.right_score == 10:
+            self.write(f"Game Over! Right player has won!",
+                       align="center", font=FONT)
