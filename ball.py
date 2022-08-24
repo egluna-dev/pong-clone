@@ -9,7 +9,7 @@ class Ball(Turtle):
         self.color("white")
         self.shapesize(stretch_wid=1, stretch_len=1)
         self.penup()
-        self.setheading(float(randint(0, 360)))
+        self.setheading(float(randint(0, 359)))
         self.sleep_time = 0.1
         self.move_x = 10
         self.move_y = 10
